@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://cfhhq1pp61t8t"]
+
+[ext_resource type="Script" uid="uid://btwy0yp0x3b6v" path="res://interval.gd" id="1_jb3hy"]
+[ext_resource type="PackedScene" uid="uid://6fueqp5fjm7v" path="res://transition_box.tscn" id="2_r2amy"]
+
+[node name="Interval" type="Node2D" unique_id=396620217]
+script = ExtResource("1_jb3hy")
+metadata/_edit_group_ = true
+
+[node name="UIstuff" type="CanvasLayer" parent="." unique_id=1202488168]
+
+[node name="TransitionBox" parent="UIstuff" unique_id=2130833164 instance=ExtResource("2_r2amy")]
+z_index = 1
+
+[node name="ColorRect" type="ColorRect" parent="UIstuff" unique_id=292069438]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Nights" type="Label" parent="UIstuff" unique_id=123458500]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -272.75
+offset_top = -127.5
+offset_right = 272.75
+offset_bottom = 127.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(-49.5, 6)
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.5894153, 0.08241064, 0.13329819, 1)
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Time" type="Label" parent="UIstuff" unique_id=759228663]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -287.0
+offset_top = -21.0
+offset_right = 258.5
+offset_bottom = 234.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(-49.5, 6)
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.511914, 0.008562617, 0.13253483, 1)
+theme_override_font_sizes/font_size = 100
+text = "12 AM"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

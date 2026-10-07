@@ -1,0 +1,61 @@
+{
+	"client": {
+		"timeout": 15.0
+	},
+	"dev": {
+		"always_scan_nodes": false,
+		"disable_real_time_file_sync": false,
+		"disable_real_time_node_sync": false,
+		"log_file_changes": false,
+		"log_file_scans": false,
+		"log_node_changes": false,
+		"log_node_scans": false,
+		"log_settings": false,
+		"menu_button": false,
+		"restart_broadcast": false,
+		"run_tests_on_start": false
+	},
+	"format_version": 1.0,
+	"last_connection": {
+		"ip": "24.198.136.64",
+		"port": 5017.0
+	},
+	"notifications": {
+		"users": true
+	},
+	"security": {
+		"sanitize_tool_scripts": true
+	},
+	"seen": {
+		"disclaimer": true
+	},
+	"server": {
+		"allow_external_connections": true,
+		"allow_multiple_users_from_same_address": true,
+		"blacklist": [],
+		"max_users": 10.0,
+		"password": "",
+		"port": 5017.0,
+		"require_approval": false,
+		"whitelist": [
+			"127.0.0.1",
+			"0.0.0.0",
+			"0:0:0:0:0:0:0:1"
+		],
+		"whitelist_enabled": false
+	},
+	"sync": {
+		"file_refresh_rate": 1.0,
+		"node_refresh_rate": 0.1,
+		"node_scan_mode": 0.0
+	},
+	"update": {
+		"auto_check_enabled": true,
+		"check_interval_hours": 168.0,
+		"download_signature": null,
+		"download_url": null,
+		"last_check": 1790797792.07423,
+		"latest_version": null
+	},
+	"username": "Tayo"
+}

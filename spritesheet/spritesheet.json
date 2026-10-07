@@ -1,0 +1,155 @@
+{
+  "frames": {
+    "Static-ezgif.com-gif-to-sprite-converter_frame_1.png": {
+      "frame": {
+        "x": 1,
+        "y": 1,
+        "w": 1280,
+        "h": 720
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1280,
+        "h": 720
+      },
+      "sourceSize": {
+        "w": 1280,
+        "h": 720
+      }
+    },
+    "Static-ezgif.com-gif-to-sprite-converter_frame_2.png": {
+      "frame": {
+        "x": 1282,
+        "y": 1,
+        "w": 1280,
+        "h": 720
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1280,
+        "h": 720
+      },
+      "sourceSize": {
+        "w": 1280,
+        "h": 720
+      }
+    },
+    "Static-ezgif.com-gif-to-sprite-converter_frame_3.png": {
+      "frame": {
+        "x": 2563,
+        "y": 1,
+        "w": 1280,
+        "h": 720
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1280,
+        "h": 720
+      },
+      "sourceSize": {
+        "w": 1280,
+        "h": 720
+      }
+    },
+    "Static-ezgif.com-gif-to-sprite-converter_frame_4.png": {
+      "frame": {
+        "x": 1,
+        "y": 722,
+        "w": 1280,
+        "h": 720
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1280,
+        "h": 720
+      },
+      "sourceSize": {
+        "w": 1280,
+        "h": 720
+      }
+    },
+    "Static-ezgif.com-gif-to-sprite-converter_frame_5.png": {
+      "frame": {
+        "x": 1282,
+        "y": 722,
+        "w": 1280,
+        "h": 720
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1280,
+        "h": 720
+      },
+      "sourceSize": {
+        "w": 1280,
+        "h": 720
+      }
+    },
+    "Static-ezgif.com-gif-to-sprite-converter_frame_6.png": {
+      "frame": {
+        "x": 2563,
+        "y": 722,
+        "w": 1280,
+        "h": 720
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1280,
+        "h": 720
+      },
+      "sourceSize": {
+        "w": 1280,
+        "h": 720
+      }
+    },
+    "Static-ezgif.com-gif-to-sprite-converter_frame_7.png": {
+      "frame": {
+        "x": 1,
+        "y": 1443,
+        "w": 1280,
+        "h": 720
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1280,
+        "h": 720
+      },
+      "sourceSize": {
+        "w": 1280,
+        "h": 720
+      }
+    }
+  },
+  "meta": {
+    "app": "Sprite Sheet Maker",
+    "version": "1.0",
+    "image": "spritesheet.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 3844,
+      "h": 2164
+    },
+    "scale": "1"
+  }
+}

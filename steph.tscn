@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://6hrmo4fsb20x"]
+
+[ext_resource type="Script" uid="uid://cysxx7n7aahpv" path="res://steph.gd" id="1_im6ay"]
+[ext_resource type="Texture2D" uid="uid://2kxuma64fac8" path="res://enemies/Steph.png" id="2_qkkiw"]
+
+[node name="Steph" type="Control" unique_id=1524322251]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.0
+offset_top = 6.0
+offset_right = -3.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_im6ay")
+
+[node name="StephDesign" type="Sprite2D" parent="." unique_id=694938493]
+z_index = 100
+position = Vector2(7, 14.000061)
+scale = Vector2(0.39982593, 0.38627067)
+texture = ExtResource("2_qkkiw")
