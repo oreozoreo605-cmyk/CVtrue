@@ -1,6 +1,40 @@
 [gd_scene format=3 uid="uid://bhdh7wywafkwj"]
 
+[ext_resource type="FontFile" uid="uid://dburvy3pldojp" path="res://fonts/DiamondlinepersonalusePerson-j9lpG.otf" id="1_y26ei"]
+[ext_resource type="Script" uid="uid://baqskbccx6h6x" path="res://game_over.gd" id="1_yxx3c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yxx3c"]
+bg_color = Color(0.042521358, 0.03696808, 0.03696819, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.07683582, 0.07683582, 0.0768358, 0.7411765)
+shadow_size = 4
+shadow_offset = Vector2(0, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ccer4"]
+bg_color = Color(0.22247294, 0.015037494, 0.05165688, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.078431375, 0.078431375, 0.078431375, 0.7411765)
+shadow_size = 4
+shadow_offset = Vector2(0, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8u835"]
+bg_color = Color(0.22247294, 0.015037494, 0.05165688, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.078431375, 0.078431375, 0.078431375, 0.7411765)
+shadow_size = 4
+shadow_offset = Vector2(0, 10)
+
 [node name="GameOver" type="Node2D" unique_id=577352240]
+script = ExtResource("1_yxx3c")
 
 [node name="Dang" type="CanvasLayer" parent="." unique_id=1577653626]
 
@@ -12,23 +46,40 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Time" type="Label" parent="Dang" unique_id=623413588]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -272.75
-offset_top = -127.5
-offset_right = 272.75
-offset_bottom = 127.5
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(-49.5, 6)
-size_flags_horizontal = 4
-theme_override_colors/font_color = Color(0.511914, 0.008562617, 0.13253483, 1)
-theme_override_font_sizes/font_size = 100
-text = "YOU WERE CAUGHT!"
+[node name="Time" type="RichTextLabel" parent="Dang" unique_id=1883783365]
+offset_left = 303.25
+offset_top = 196.5
+offset_right = 848.75
+offset_bottom = 451.5
+theme_override_colors/default_color = Color(0.46748102, 0.038257822, 0.09876201, 1)
+theme_override_colors/font_outline_color = Color(0.76639694, 0.18898177, 0.001460287, 1)
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "[shake][outline_size=10]YOU WERE CAUGHT!"
+scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
-autowrap_mode = 2
+
+[node name="Load" type="Button" parent="Dang" unique_id=40872290]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -109.0
+offset_top = -142.0
+offset_right = 109.0
+offset_bottom = -55.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.38884833, 0.01793989, 0.064997174, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("1_y26ei")
+theme_override_font_sizes/font_size = 55
+theme_override_styles/normal = SubResource("StyleBoxFlat_yxx3c")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ccer4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ccer4")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_8u835")
+text = "Return?"
+
+[connection signal="pressed" from="Dang/Load" to="." method="_on_load_pressed"]

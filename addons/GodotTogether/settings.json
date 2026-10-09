@@ -52,10 +52,10 @@
 	"update": {
 		"auto_check_enabled": true,
 		"check_interval_hours": 168.0,
-		"download_signature": null,
-		"download_url": null,
-		"last_check": 1790797792.07423,
-		"latest_version": null
+		"download_signature": "JFFUzXdNuzcFTJ7rQLFQrMnl+/QoLl0ZdN7rVsp9+0Y1Bh3eePViG6u0aNKq2osVYRyNuL+p4Nndo45Jyqg2G6zgrlr8YEC1vHzTuMGSk+/Fa8+Zc6nDd5NJjTxT6+b5rSuNwuJUkIbI1mF+5Pkuw1chwnvcuC5omaqk/61JG3RhwLJnCJw1vAeJ0riZ7cD3x/zP9NBgkkVZTB9ZZemf68wUruy967+ijz5L3KvyWgS6XmTRrced4zWVuIvRbnI1aMCiT444+1fNU1P1BcxgK12GDPrIkHxwEk/80KxE2q6GY6Txp6RfHZO6h/NaoO2KtKWxWEfnzGwPujCGj1MuVHXYCzqTbL1PLGhOHdPV/ZxPcSZPQwvy/YfTWv3X2P8cNmVt/m5+pifkZri+jpPMSAU0fnoliGJnf+Dl4r/vk6+W3GR3+/klA/Hn5y10vgPcO8qR77k3hrzezDYIQhBKRerOugA4jSEE9hPOEvHUG4ybKuqwtL8/qYAQabC69HV6W2wiq1DXTGdH1iF6V8oXrfkt/Oh0Fc3NH+2HWkiXlt2hePlIUX7apJco+nHjPWm9jM0Ky6g3G7spHgIYGBmlRIa4D6U9BAuYJbiRX0J6fXNFZSStAT63/0DlUX+qKAc65a6LqWvdsGwKQuvhGrfUnLZf95K41Go1npxaowLgaUI=",
+		"download_url": "https://github.com/Wolfyxon/GodotTogether/releases/download/v1.0-alpha/GodotTogether.zip",
+		"last_check": 1791414948.48583,
+		"latest_version": "1.0-alpha"
 	},
 	"username": "Tayo"
 }

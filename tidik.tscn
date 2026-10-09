@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://chxla06trpph1"]
+
+[ext_resource type="Texture2D" uid="uid://dfvvl7vbfqap8" path="res://enemies_allies/tidick.png" id="1_i5oea"]
+
+[node name="Tidik" type="Control" unique_id=141402258]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1820716428]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_i5oea")

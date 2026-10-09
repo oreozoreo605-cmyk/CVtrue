@@ -1,116 +1,198 @@
 [gd_scene format=3 uid="uid://bbge2arqrl1ky"]
 
-[ext_resource type="Texture2D" uid="uid://wr0fjo3pi4kr" path="res://spritesheet/spritesheet.png" id="1_06t4h"]
-[ext_resource type="Texture2D" uid="uid://bhbbngds8y08h" path="res://spritesheet/gradient-texture.png" id="1_fu7sn"]
-[ext_resource type="Script" uid="uid://cfkugrx302xq8" path="res://bg.gd" id="1_jix8l"]
-[ext_resource type="Texture2D" uid="uid://ndcsj1ryjh6c" path="res://spritesheet/him.png" id="3_jix8l"]
+[ext_resource type="Script" uid="uid://dg3y3ajm7o1qw" path="res://bg.gd" id="1_jix8l"]
+[ext_resource type="FontFile" uid="uid://dburvy3pldojp" path="res://fonts/DiamondlinepersonalusePerson-j9lpG.otf" id="3_fu7sn"]
+[ext_resource type="Texture2D" uid="uid://bs4tnunnr0hsv" path="res://him.png" id="3_jix8l"]
+[ext_resource type="FontFile" uid="uid://bovptnsl4pyqw" path="res://fonts/BloodstainPersonalUseBold-1GM30.ttf" id="4_jix8l"]
+[ext_resource type="Texture2D" uid="uid://cjqfo8tbmbobv" path="res://angryimg.png" id="5_glbon"]
+[ext_resource type="Texture2D" uid="uid://cs783xeeku1pa" path="res://Photoshop/televison-sprite-sheet.png" id="6_nlkkf"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7vrkn"]
-atlas = ExtResource("1_06t4h")
-region = Rect2(0, 0, 1281, 721)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j5tpe"]
+bg_color = Color(0.042521358, 0.03696808, 0.03696819, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.07683582, 0.07683582, 0.0768358, 0.7411765)
+shadow_size = 4
+shadow_offset = Vector2(0, 10)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fu7sn"]
-atlas = ExtResource("1_06t4h")
-region = Rect2(1281, 0, 1281, 721)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jix8l"]
+bg_color = Color(0.22247294, 0.015037494, 0.05165688, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.078431375, 0.078431375, 0.078431375, 0.7411765)
+shadow_size = 4
+shadow_offset = Vector2(0, 10)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jix8l"]
-atlas = ExtResource("1_06t4h")
-region = Rect2(2562, 0, 1281, 721)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m4h73"]
+bg_color = Color(0.22247294, 0.015037494, 0.05165688, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.078431375, 0.078431375, 0.078431375, 0.7411765)
+shadow_size = 4
+shadow_offset = Vector2(0, 10)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_glbon"]
-atlas = ExtResource("1_06t4h")
-region = Rect2(0, 721, 1281, 721)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qe12f"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nlkkf"]
-atlas = ExtResource("1_06t4h")
-region = Rect2(1281, 721, 1281, 721)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nlkkf"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8qtwp"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qe12f"]
-atlas = ExtResource("1_06t4h")
-region = Rect2(2562, 721, 1281, 721)
+atlas = ExtResource("6_nlkkf")
+region = Rect2(0, 0, 501, 377)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8qtwp"]
-atlas = ExtResource("1_06t4h")
-region = Rect2(0, 1442, 1281, 721)
+atlas = ExtResource("6_nlkkf")
+region = Rect2(501, 0, 501, 377)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dy7ct"]
+atlas = ExtResource("6_nlkkf")
+region = Rect2(1002, 0, 501, 377)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0o4t1"]
+atlas = ExtResource("6_nlkkf")
+region = Rect2(1503, 0, 501, 377)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0k4wn"]
+atlas = ExtResource("6_nlkkf")
+region = Rect2(2004, 0, 501, 377)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j5v2v"]
+atlas = ExtResource("6_nlkkf")
+region = Rect2(2505, 0, 501, 377)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jku6o"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7vrkn")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fu7sn")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jix8l")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_glbon")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nlkkf")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_qe12f")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8qtwp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dy7ct")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0o4t1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0k4wn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j5v2v")
 }],
 "loop": 1,
 "name": &"default",
 "speed": 5.0
 }]
 
-[sub_resource type="FontVariation" id="FontVariation_coo7w"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_jku6o"]
-font = SubResource("FontVariation_coo7w")
-font_size = 100
-font_color = Color(0.549962, 0.014854257, 9.62615e-08, 1)
-
 [node name="mainMenu" type="Node2D" unique_id=479989417]
 script = ExtResource("1_jix8l")
 
-[node name="GradientTexture" type="Sprite2D" parent="." unique_id=883499507]
-position = Vector2(572, 324)
-scale = Vector2(2.2265625, 1.2539063)
-texture = ExtResource("1_fu7sn")
+[node name="Info" type="CanvasLayer" parent="." unique_id=519656392]
 
-[node name="Him" type="Sprite2D" parent="." unique_id=1638399956]
+[node name="Play" type="Button" parent="Info" unique_id=976751011]
+offset_left = 157.0
+offset_top = 20.0
+offset_right = 375.0
+offset_bottom = 107.0
+theme_override_colors/font_color = Color(0.38884833, 0.01793989, 0.064997174, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_fu7sn")
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxFlat_j5tpe")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jix8l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jix8l")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_m4h73")
+text = "Play"
+
+[node name="Load" type="Button" parent="Info" unique_id=1150981171]
+offset_left = 757.0
+offset_top = 20.0
+offset_right = 975.0
+offset_bottom = 107.0
+theme_override_colors/font_color = Color(0.38884833, 0.01793989, 0.064997174, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_fu7sn")
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxFlat_j5tpe")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jix8l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jix8l")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_m4h73")
+text = "Load"
+
+[node name="Save" type="Button" parent="Info" unique_id=77807579]
+offset_left = 14.0
+offset_top = 549.0
+offset_right = 232.0
+offset_bottom = 636.0
+theme_override_colors/font_color = Color(0.38884833, 0.01793989, 0.064997174, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_fu7sn")
+theme_override_font_sizes/font_size = 55
+theme_override_styles/normal = SubResource("StyleBoxFlat_qe12f")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nlkkf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8qtwp")
+text = "Save"
+
+[node name="restart" type="Button" parent="Info" unique_id=349459914]
+offset_left = 925.0
+offset_top = 549.0
+offset_right = 1143.0
+offset_bottom = 636.0
+theme_override_colors/font_color = Color(0.38884833, 0.01793989, 0.064997174, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_fu7sn")
+theme_override_font_sizes/font_size = 55
+theme_override_styles/normal = SubResource("StyleBoxFlat_qe12f")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nlkkf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8qtwp")
+text = "restart"
+
+[node name="CV" type="RichTextLabel" parent="Info" unique_id=335686763]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_right = 200.0
+offset_bottom = 417.0
+grow_horizontal = 2
+theme_override_colors/default_color = Color(0.33961216, 0.00033297756, 8.4228816e-08, 1)
+theme_override_fonts/normal_font = ExtResource("4_jix8l")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "Five Nights at CV"
+horizontal_alignment = 1
+
+[node name="Him" type="Sprite2D" parent="Info" unique_id=1638399956]
 modulate = Color(0.27387273, 0.27387273, 0.27387273, 1)
-position = Vector2(818, 515)
+position = Vector2(596, 741)
 scale = Vector2(3.625, 2.731908)
 texture = ExtResource("3_jix8l")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1193141700]
+position = Vector2(561, 583)
+scale = Vector2(4, 4)
+texture = ExtResource("5_glbon")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1837729341]
 modulate = Color(1, 1, 1, 0.13725491)
 position = Vector2(573.25, 325.5)
-scale = Vector2(0.8981265, 0.9029126)
+scale = Vector2(2.5, 2.515)
 sprite_frames = SubResource("SpriteFrames_jku6o")
-frame_progress = 0.36454576
+frame_progress = 0.95042706
 
-[node name="Info" type="CanvasLayer" parent="." unique_id=519656392]
-
-[node name="CV" type="Label" parent="Info" unique_id=79690967]
-custom_minimum_size = Vector2(1, 0)
-custom_maximum_size = Vector2(400, -1)
-offset_left = 1.0
-offset_top = 102.0
-offset_right = 401.0
-offset_bottom = 519.0
-text = "Five Nights at CV"
-label_settings = SubResource("LabelSettings_jku6o")
-horizontal_alignment = 1
-autowrap_mode = 2
-
-[node name="Button" type="Button" parent="Info" unique_id=976751011]
-offset_left = 92.0
-offset_top = 526.0
-offset_right = 310.0
-offset_bottom = 613.0
-theme_override_colors/font_color = Color(0.65367645, 0.055430934, 0.13559815, 1)
-theme_override_font_sizes/font_size = 50
-text = "Play"
-
-[connection signal="pressed" from="Info/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Info/Play" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Info/Load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="Info/Save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="Info/restart" to="." method="_on_restart_pressed"]

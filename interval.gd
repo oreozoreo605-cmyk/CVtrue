@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var NightValue = 1
+@onready var NightValue = SaveLoad.save_file_data.Night
 
 @onready var nights = $UIstuff/Nights
 @onready var Trans = $UIstuff/TransitionBox/AnimationPlayer

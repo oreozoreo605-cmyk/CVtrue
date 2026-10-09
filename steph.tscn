@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://6hrmo4fsb20x"]
 
 [ext_resource type="Script" uid="uid://cysxx7n7aahpv" path="res://steph.gd" id="1_im6ay"]
-[ext_resource type="Texture2D" uid="uid://2kxuma64fac8" path="res://enemies/Steph.png" id="2_qkkiw"]
+[ext_resource type="Texture2D" uid="uid://2kxuma64fac8" path="res://enemies_allies/Steph.png" id="2_qkkiw"]
 
 [node name="Steph" type="Control" unique_id=1524322251]
 layout_mode = 3

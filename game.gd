@@ -16,6 +16,7 @@ extends Node2D
 
 @onready var Chromebook = $layout1/Chromebook
 @onready var chrmAnim = $layout1/Chromebook/AnimationPlayer
+@onready var ChromeWork = true
 
 @onready var cameraControls = $CameraControls
 
@@ -35,6 +36,21 @@ extends Node2D
 @onready var StevDistance = Stev.distance
 @onready var StevSpotted = Stev.spotted
 
+@onready var Ost = get_tree().root.find_child("Ostr", true, false)
+@onready var OstDistance = Ost.distance
+@onready var OstSpotted = Ost.spotted
+
+@onready var faunTag = $layout1/goGuardian
+@onready var faunTimer = $layout1/TimeLeft
+@onready var faunTime
+
+@onready var tidicksGuard = $Tidik.tidicksDefend
+
+#AESTETICS
+
+@onready var CamStatic = $layout1/cameraStatic
+
+
 
 
 
@@ -42,6 +58,9 @@ extends Node2D
 func _ready() -> void:
 	#Simple beginning transition
 	GameTimer.start()
+	faunTimer.start()
+	
+	CamStatic.play()
 
 	
 	pass # Replace with function body.
@@ -52,6 +71,7 @@ func _process(delta: float) -> void:
 	
 	##START UPDATERS##
 	StevDistance = Stev.distance
+	OstDistance = Ost.distance
 	
 	####THIS CONTAINS ALL THE CAMERA'S SCRIPTS####
 	if left == true:
@@ -74,10 +94,10 @@ func _process(delta: float) -> void:
 	pass
 	
 	##CHROMEBOOK SCRIPTS##
-	if chromebookUp:
+	if chromebookUp and ChromeWork:
 		MouseLeft.input_pickable = false
 		MouseRight.input_pickable = false
-	else:
+	elif not chromebookUp:
 		MouseLeft.input_pickable = true
 		MouseRight.input_pickable = true
 		
@@ -87,15 +107,21 @@ func _process(delta: float) -> void:
 		gym.visible = false
 		pool.visible = false
 		
+		CamStatic.visible = true
+		
 	elif CurrentCam == 2:
 		outside.visible = false
 		gym.visible = true
 		pool.visible = false
 		
+		CamStatic.visible = true
+		
 	elif CurrentCam == 3:
 		outside.visible = false
 		gym.visible = false
 		pool.visible = true
+		
+		CamStatic.visible = true
 		
 	elif CurrentCam == 4:
 		print("4")
@@ -105,6 +131,10 @@ func _process(delta: float) -> void:
 		gym.visible = false
 		pool.visible = false
 		
+		CamStatic.visible = false
+	
+	var StevCD = false
+	var OstrCD = false
 	##STEV SCRIPTS##
 	if StevDistance == 10:
 			Stev.reparent(outside, true)
@@ -117,17 +147,71 @@ func _process(delta: float) -> void:
 	if StevDistance == 6:
 			Stev.reparent(pool, true)
 			Stev.position = $pool/Spawn1.position
+			
 	
 	if StevDistance == 4:
+			StevCD = false
 			Stev.reparent($".", true)
 			Stev.position = $"."/Spawn1.position
 			shatter.play()
+	
 			
 			if not StevSpotted:
-				await get_tree().create_timer(2).timeout
+				if StevCD == false:
+					await get_tree().create_timer(2).timeout
+					StevCD = true
+					
 				if not chromebookUp:
 					Stev.spotted = true
+				else:
+					Stev.spotted = false
+	
+	##OST SCRIPTS##
+	if OstDistance == 10:
+			Ost.reparent(outside, true)
+			Ost.position = $outside/Spawn2.position
+		
+	if OstDistance == 8:
+			Ost.reparent(gym, true)
+			Ost.position = $gym/Spawn2.position
+	
+	if OstDistance == 6:
+			Ost.reparent(pool, true)
+			Ost.position = $pool/Spawn2.position
+	
+	if OstDistance == 4:
 			
+		
+			Ost.reparent($".", true)
+			Ost.position = $"."/Spawn2.position
+			shatter.play()
+			
+			if not OstSpotted:
+				await get_tree().create_timer(2).timeout
+				if not chromebookUp:
+					Ost.spotted = true
+					
+	##FAUN SCRIPTS##
+	faunTime = faunTimer.time_left
+	
+	faunTag.text = "[shake]A  \"GUARDIAN\" IS WATCHING YOU:
+The Faun's oblivion: " + str(round(faunTime))
+	
+	if chromebookUp:
+		faunTimer.paused = false
+	else:
+		faunTimer.paused = true
+		
+	if not ChromeWork and chromebookUp:
+		chromebookUp = false
+		chrmAnim.play("PullDown")
+
+
+
+
+func _on_time_left_timeout() -> void:
+	ChromeWork = false
+	pass # Replace with function body.			
 			
 			
 
@@ -157,10 +241,9 @@ func _on_chrome_button_pressed() -> void:
 	if chromebookUp:
 		chromebookUp = false
 		chrmAnim.play("PullDown")
-	else:
+	elif not chromebookUp and ChromeWork:
 		chromebookUp = true
 		chrmAnim.play("PullUp")
-		
 		
 	pass # Replace with function body.
 
